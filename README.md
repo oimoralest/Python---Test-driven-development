@@ -2,4 +2,4 @@
 
 ## Description
 
-This repository is for contributing edges cases to project 0x07. Python - Test-driven development
+This repository is for contributing edges cases for project: 0x07. Python - Test-driven development
