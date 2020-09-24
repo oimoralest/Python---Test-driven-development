@@ -55,7 +55,7 @@ Adding big numbers:
         1213258678669678677778678677778688
 
 Adding with inf:
-        >>> add_integer(float('inf), 2)
+        >>> add_integer(float('inf'), 2)
         Traceback (most recent call last):
                 ...
         OverflowError: cannot convert float infinity to integer
