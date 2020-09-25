@@ -42,7 +42,7 @@ Checking if $1 exists
 "
 
 # waiting
-sleep 4
+sleep 2
 
 if test -f "$FILENAME";
 then
@@ -72,7 +72,7 @@ Checking PEP 8 for all Python files
 "
 
 # waiting
-sleep 4
+sleep 2
 
 pep8 *.py > __tmp__.txt
 
@@ -107,7 +107,7 @@ FILE=$2
 
 if test -f "$FILE";
 then
-    WORD=$(grep -e $1 ./0-add_integer.py)
+    WORD=$(grep -e $1 $2)
 else
     echo -e "
 \033[31m $FILE file does not exists\033[37m
@@ -116,7 +116,7 @@ else
 fi
 
 # waiting
-sleep 4
+sleep 2
 
 if test "$WORD";
 then
@@ -142,7 +142,7 @@ FILE=$2
 
 if test -f "$FILE";
 then
-    WORD=$(grep -e $1 ./0-add_integer.py)
+    WORD=$(grep -e $1 $2)
 else
     echo -e "
 \033[31m $FILE file does not exists\033[37m
@@ -151,7 +151,7 @@ else
 fi
 
 # waiting
-sleep 4
+sleep 2
 
 if test "$WORD";
 then
@@ -327,8 +327,6 @@ echo "
 check_file tests/6-max_integer_test.py
 # Checking for the shebang
 check_shebang '#!/usr/bin/python3' tests/6-max_integer_test.py
-# Checking for importing modules
-check_import import tests/6-max_integer_test.py
 
 # Continue?
 echo "Do you want to continue [y/n]?"
@@ -414,7 +412,7 @@ Checking betty for 102-python.c
 "
 
 # waiting
-sleep 4
+sleep 2
 
 betty ./102-python.c > __tmp__.txt
 

@@ -92,6 +92,13 @@ Checking empty matrix:
                 ...
         TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+Checking empty list of list:
+        >>> matrix = [[], [], []]
+        >>> print(matrix_divided(matrix, 2))
+        Traceback (most recent call last):
+                ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 Checking a matrix with a type different of a list:
         >>> matrix = None
         >>> print(matrix_divided(matrix, 2))

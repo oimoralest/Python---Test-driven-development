@@ -14,7 +14,7 @@ Check docstring for function:
         >>> len(add_integer.__doc__) > 0
         True
 
-Adding two numbers
+Adding two numbers:
         >>> add_integer(4, 2)
         6
 
@@ -44,17 +44,12 @@ Adding a string with int:
                 ...
         TypeError: a must be an integer
 
-Adding an int with string:
+
+Adding a int with string:
         >>> add_integer(2, "H")
         Traceback (most recent call last):
                 ...
         TypeError: b must be an integer
-
-Adding bool with int:
-        >>> add_integer(True, 1)
-        Traceback (most recent call last):
-                ...
-        TypeError: a must be an integer
 
 Adding big numbers:
         >>> add_integer(1213213213213213212313213212313223, 45465456465465465465465465465)

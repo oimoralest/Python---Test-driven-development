@@ -1,0 +1,44 @@
+The ``3-say_my_name`` module
+===============================
+
+Using ``say_my_name``
+---------------------
+
+Checking docstring for module:
+        >>> __import__('3-say_my_name').__doc__ != None
+        True
+
+Import ``add_integer`` from the ``3-say_my_name`` module:
+        >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Check docstring for function:
+        >>> len(say_my_name.__doc__) > 0
+        True
+
+Checking correct working:
+        >>> say_my_name("Python", "Doctest")
+        My name is Python Doctest
+
+Checking for first_name different than a string:
+        >>> say_my_name(None, "Python")
+        Traceback (most recent call last):
+                ...
+        TypeError: first_name must be a string
+
+Checking for last_name different than a string:
+        >>> say_my_name("Python", None)
+        Traceback (most recent call last):
+                ...
+        TypeError: last_name must be a string
+
+Calling the function without arguments:
+        >>> say_my_name()
+        Traceback (most recent call last):
+                ...
+        TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Calling the function with 1 argument:
+        >>> say_my_name("Python")
+        My name is Python 
+        >>> say_my_name("Python" " is cool")
+        My name is Python is cool 
