@@ -104,18 +104,6 @@ Checking a matrix with a type different of a list:
                 ...
         TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-Checking the return?:
-        >>> matrix = [[1, 2], [3, 4], [5, 6]]
-        >>> new = matrix_divided(matrix, 2)
-        >>> type(new) is list
-        True
-        >>> for row in new:
-        ...     type(row) is list
-        ...
-        True
-        True
-        True
-
 Calling the function without arguments:
         >>> matrix_divided()
         Traceback (most recent call last):
