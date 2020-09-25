@@ -29,7 +29,32 @@ function print_ok()
     echo -e "[\033[32mPASS\033[37m]"
 }
 ############################################################
-# Check if a file exist
+# Checks if a file has execution permissions
+############################################################
+
+function check_permissions()
+{
+FILE=$1
+
+echo "
+Checking if $1 has execution permissions
+"
+
+# waiting
+sleep 2
+
+if test -x "$FILE";
+then
+    print_ok
+else
+    print_ko
+    echo -e "
+\033[31m$FILENAME file does not has execution permissions\033[37m
+    "
+fi
+}
+############################################################
+# Checks if a file exist
 ############################################################
 
 function check_file()
@@ -189,6 +214,8 @@ check_file ./0-add_integer.py
 check_shebang '#!/usr/bin/python3' ./0-add_integer.py
 # Checking for importing modules
 check_import import ./0-add_integer.py
+# Checking for execution permission
+check_permissions ./0-add_integer.py
 # Checking for 0-add_integer.py test
 check_file tests/0-add_integer.txt
 
@@ -217,6 +244,8 @@ check_file ./2-matrix_divided.py
 check_shebang '#!/usr/bin/python3' ./2-matrix_divided.py
 # Checking for importing modules
 check_import import ./2-matrix_divided.py
+# Checking for execution permission
+check_permissions ./2-matrix_divided.py
 # Checking for 2-matrix_divided.py test
 check_file tests/2-matrix_divided.txt
 
@@ -245,6 +274,8 @@ check_file ./3-say_my_name.py
 check_shebang '#!/usr/bin/python3' ./3-say_my_name.py
 # Checking for importing modules
 check_import import ./3-say_my_name.py
+# Checking for execution permission
+check_permissions ./3-say_my_name.py
 # Checking for 3-say_my_name.py test
 check_file tests/3-say_my_name.txt
 
@@ -273,6 +304,8 @@ check_file ./4-print_square.py
 check_shebang '#!/usr/bin/python3' ./4-print_square.py
 # Checking for importing modules
 check_import import ./4-print_square.py
+# Checking for execution permission
+check_permissions ./4-print_square.py
 # Checking for 4-print_square.py test
 check_file tests/4-print_square.txt
 
@@ -301,6 +334,8 @@ check_file ./5-text_indentation.py
 check_shebang '#!/usr/bin/python3' ./5-text_indentation.py
 # Checking for importing modules
 check_import import ./5-text_indentation.py
+# Checking for execution permission
+check_permissions ./5-text_indentation.py
 # Checking for 5-text_indentation.py test
 check_file tests/5-text_indentation.txt
 
@@ -327,6 +362,8 @@ echo "
 check_file tests/6-max_integer_test.py
 # Checking for the shebang
 check_shebang '#!/usr/bin/python3' tests/6-max_integer_test.py
+# Checking for execution permission
+check_permissions tests/6-max_integer_test.py
 
 # Continue?
 echo "Do you want to continue [y/n]?"
@@ -353,6 +390,8 @@ check_file ./100-matrix_mul.py
 check_shebang '#!/usr/bin/python3' ./100-matrix_mul.py
 # Checking for importing modules
 check_import import ./100-matrix_mul.py
+# Checking for execution permission
+check_permissions ./100-matrix_mul.py
 # Checking for 100-matrix_mul.py test
 check_file tests/100-matrix_mul.txt
 
@@ -381,6 +420,8 @@ check_file ./101-lazy_matrix_mul.py
 check_shebang '#!/usr/bin/python3' ./101-lazy_matrix_mul.py
 # Checking for importing modules
 check_import import ./101-lazy_matrix_mul.py
+# Checking for execution permission
+check_permissions ./101-lazy_matrix_mul.py
 # Checking for 101-lazy_matrix_mul.py test
 check_file tests/101-lazy_matrix_mul.txt
 
