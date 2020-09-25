@@ -88,7 +88,9 @@ Checking divide by zero:
 Checking empty matrix:
         >>> matrix = []
         >>> print(matrix_divided(matrix, 2))
-        []
+        Traceback (most recent call last):
+                ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Checking a matrix with a type different of a list:
         >>> matrix = None
